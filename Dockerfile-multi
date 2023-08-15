@@ -1,0 +1,20 @@
+# Stage 1: Construção
+FROM node:14-alpine AS builder
+
+WORKDIR /usr/app/oficina
+
+COPY package*.json ./
+RUN npm install
+COPY . .
+
+# Stage 2: Produção
+FROM node:14-alpine
+
+WORKDIR /usr/app/oficina
+
+# Copiar os arquivos da etapa anterior
+COPY --from=builder /usr/app/oficina .
+
+EXPOSE 3000
+
+CMD [ "npm", "start" ]

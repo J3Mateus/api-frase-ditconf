@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  database:
+    image: postgres:latest
+    container_name: database
+    volumes:
+        - ./init-scripts:/docker-entrypoint-initdb.d
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5432:5432
+    networks:
+      - db_rede
+
+  api-frases:
+    container_name: api-frases
+    build: 
+      context: .
+      dockerfile: Docker/Dockerfile
+    ports:
+      - 3000:3000
+    depends_on:
+      - database
+    networks:
+      - db_rede
+
+networks:
+  db_rede:
+    driver: bridge
