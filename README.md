@@ -30,14 +30,8 @@ Siga as instruções abaixo para executar a aplicação em um ambiente de desenv
 - Obter uma frase pelo ID:
   - GET /api/frases/:id
 
-- Adicionar uma nova frase:
+- Adicionar frases:
   - POST /api/frases
-  - Corpo da Requisição:
-    ```json
-    {
-        "frase": "Nova frase motivacional aqui."
-    }
-    ```
 
 - Atualizar uma frase:
   - PUT /api/frases/:id
