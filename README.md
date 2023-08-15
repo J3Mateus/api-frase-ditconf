@@ -20,7 +20,7 @@ Siga as instruções abaixo para executar a aplicação em um ambiente de desenv
 4. Instale as dependências usando o comando: `npm install`
 5. Configure as informações do banco de dados no arquivo `db.js`.
 6. Execute o comando: `npm start`
-7. Acesse a API em: `http://localhost:3000/api/frases`
+7. Acesse a API em: `http://localhost:3000/api/info`
 
 ## Rotas
 
