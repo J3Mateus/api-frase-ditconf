@@ -25,13 +25,13 @@ Siga as instruções abaixo para executar a aplicação em um ambiente de desenv
 ## Rotas
 
 - Listar todas as frases:
-  - GET /api/frases
+  - GET /api/frases/get/all
 
 - Obter uma frase pelo ID:
-  - GET /api/frases/:id
+  - GET /api/frases/get/:id
 
 - Adicionar frases:
-  - POST /api/frases
+  - POST /api/frases/add
 
 - Atualizar uma frase:
   - PUT /api/frases/:id
@@ -43,7 +43,7 @@ Siga as instruções abaixo para executar a aplicação em um ambiente de desenv
     ```
 
 - Excluir uma frase:
-  - DELETE /api/frases/:id
+  - DELETE /api/frases/delete/:id
 
 ## Oficina de Docker do DITConf
 
